@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="grouptest">
+    <test name ="runall">
+        <classes>
+            <class name="com.hyt.testng.group.GroupsOnClass1"/>
+            <class name="com.hyt.testng.group.GroupsOnClass2"/>
+            <class name="com.hyt.testng.group.GroupsOnClass3"/>
+        </classes>
+    </test>
+    <test name="one">
+        <groups>
+            <run>
+                <!--只运行这一个的组-->
+                <include name="class1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.hyt.testng.group.GroupsOnClass1"/>
+            <class name="com.hyt.testng.group.GroupsOnClass2"/>
+            <class name="com.hyt.testng.group.GroupsOnClass3"/>
+        </classes>
+    </test>
+</suite>
